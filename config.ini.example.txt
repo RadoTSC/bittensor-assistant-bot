@@ -1,0 +1,6 @@
+# X BURNER ACCOUNT
+# Don't associate any of this with your main X acc's use mail.com
+[X]
+username = YOUR_X_HANDLE
+password = YOUR_X_PW
+email    = YOUR_X_EMAIL_LOG_IN
