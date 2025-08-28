@@ -109,8 +109,8 @@ SCRAPER_EXE = os.path.join(BASE_DIR, ".scrape311", "Scripts", "python.exe")
 SCRAPER_SCRIPT = os.path.join(BASE_DIR, "scraper_twikit.py")
 
 
-DISCORD_DIGEST_CHANNEL_ID = int(os.getenv("DISCORD_CHANNEL_ID", "1408834577279090909"))
-KOLS_CHANNEL_ID = int(os.getenv("KOLS_CHANNEL_ID", "1408833249840730132"))  # output for KOL summaries
+DISCORD_DIGEST_CHANNEL_ID = int(os.getenv("DISCORD_CHANNEL_ID", "EX_CHANNEL_ID"))
+KOLS_CHANNEL_ID = int(os.getenv("KOLS_CHANNEL_ID", "EX_CHANNEL_ID"))  # output for KOL summaries
 NEWS_UPDATES_CHANNEL_ID = int(os.getenv("NEWS_UPDATES_CHANNEL_ID", "0"))
 
 
@@ -138,17 +138,19 @@ pending_confirmations = {}
 
 
 # Mapping of subnet names to their corresponding channel IDs
+# Add as many channels you want for bot outputs
 SUBNET_CHANNELS = {
-    "bitcast-93": 1408844138945843350,
-    "ridges-62": 1408844167995457736,
-    "chutes-64": 1408844243136679966,
-    "flamewire-97": 1408877595390378005,
-    "taonado-113": 1408877618664837180,
-    "bitsec-60": 1408877536062083205,
-    "compute-horde-12": 1408877428503482428
+    "bitcast-93": 1409911111111222333, #Channel_ID_EX
+    "ridges-62": 1409922222222333444, #Channel_ID_EX
+    "chutes-64": 1409933333333444555, #Channel_ID_EX
+    "flamewire-97": 1409944444444555666, #Channel_ID_EX
+    "taonado-113": 1409955555555666777, #Channel_ID_EX
+    "bitsec-60": 1409966666666777888, #Channel_ID_EX
+    "compute-horde-12": 1409977777777888999 #Channel_ID_EX
 }
 
 # --- KOL config (order = output order at 8:00) ---
+# Add as many kols as you wish to this list also.
 KOL_HANDLES = [
     "TAOTemplar", "JosephJacks_", "jaltucher", "KeithSingery", "SiamKidd", "markjeffrey",
     "Taotreasuries", "here4impact", "SubnetStats", "mogmachine", "const_reborn", "shibshib89",
@@ -446,12 +448,12 @@ async def on_message(message):
         return
 
     # 🔒 Only allow your user ID
-    if message.author.id != 468122415235334159:
+    if message.author.id != MY_USER_ID=YOUR_DISCORD_USER_ID:
         await bot.process_commands(message)
         return
 
     # Only listen in #bittensor-curation
-    if message.channel.id == 1408834577279090909:
+    if message.channel.id == YOUR_BITTENSOR-CURATION_CHANNEL_ID: 
         print(f"📥 New message in #bittensor-curation: {message.content!r}")
 
         import re
