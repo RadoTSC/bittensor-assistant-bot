@@ -1,0 +1,6 @@
+# Fetch cookies from your burner acc once your logged in using F12 while on X
+{
+  "auth_token": "YOUR_AUTH_TOKEN",
+  "ct0": "YOUR_CT0",
+  "twid": "YOUR_TWID"
+}
