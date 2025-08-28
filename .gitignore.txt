@@ -1,0 +1,13 @@
+
+# Secrets (never upload)
+.env
+config.ini
+cookies.json
+
+# Python / local environment stuff
+__pycache__/
+.venv/
+venv/
+*.pyc
+*.log
+.DS_Store
